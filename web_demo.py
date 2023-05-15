@@ -2,7 +2,7 @@ from transformers import AutoModel, AutoTokenizer
 import gradio as gr
 import mdtex2html
 
-model_directory = 'D:\huajun\chatGLM\chatglm-6B'
+model_directory = 'D:\huajun\chatGLM\chatGLM\chatglm-6B'
 tokenizer = AutoTokenizer.from_pretrained(model_directory, trust_remote_code=True)
 model = AutoModel.from_pretrained(model_directory, trust_remote_code=True).half().cuda()
 model = model.eval()
